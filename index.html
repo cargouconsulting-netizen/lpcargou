@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cargou Consulting — Gagnez plus. Sans travailler plus.</title>
+<meta name="description" content="Restaurateurs, artisans, prestataires de services entre 100 k€ et 500 k€ de CA : j'identifie les leviers qui vous font gagner de l'argent et du temps avec l'activité que vous avez déjà. Diagnostic gratuit.">
+<meta name="theme-color" content="#0C1430">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<!-- Partage réseaux sociaux : remplacer le domaine par le domaine final -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Gagnez plus. Sans travailler plus.">
+<meta property="og:description" content="Diagnostic gratuit : j'identifie les leviers qui vous font gagner de l'argent et du temps, avec l'activité que vous avez déjà.">
+<meta property="og:image" content="https://cargouconsulting.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- SF Pro Display = police système Apple. Inter = repli Windows / Android. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root {
+    --navy: #0C1430;          /* bleu foncé du client (sections sombres) */
+    --navy-deep: #070C20;     /* hero / footer */
+    --navy-card: #121C3D;     /* surfaces sur fond sombre */
+    --white: #FFFFFF;
+    --off: #F6F7FB;
+    --text: #0C1430;
+    --muted: #5F6A86;
+    --muted-dark: rgba(255,255,255,.62);
+    --line: #E4E8F1;
+    --line-dark: rgba(255,255,255,.10);
+    --sky: #8DB0FF;           /* unique accent : mots clés sur fond sombre */
+    --font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --w: 1180px;
+    --header-h: 68px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; font-family: var(--font); font-size: 1.0625rem; line-height: 1.55; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  p, h1, h2, h3 { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  h1, h2, h3 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
+  h1 { font-size: clamp(2.7rem, 6.6vw, 5rem); letter-spacing: -0.04em; }
+  h2 { font-size: clamp(2rem, 4.2vw, 3.25rem); }
+  h3 { font-size: 1.25rem; letter-spacing: -0.02em; line-height: 1.2; }
+  .sub { font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.5; color: var(--muted); text-wrap: pretty; }
+  .dark { background: var(--navy); color: #fff; }
+  .dark .sub { color: var(--muted-dark); }
+  .dark h1 em, .dark h2 em { font-style: normal; color: var(--sky); }
+  .wrap { width: 100%; max-width: var(--w); margin-inline: auto; padding-inline: clamp(18px, 4vw, 32px); }
+  .section { padding-block: clamp(72px, 9vw, 120px); }
+  .center { text-align: center; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 2px; background: var(--navy); }
+  .dark .eyebrow { color: var(--sky); }
+  .dark .eyebrow::before { background: var(--sky); }
+  .head { max-width: 760px; margin: 0 auto clamp(40px, 5vw, 64px); text-align: center; }
+  .head .sub { margin-top: 18px; }
+
+  /* ---------- Boutons : une seule action, même libellé partout ---------- */
+  .btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 15px 30px; border-radius: 999px; border: 0; font: inherit; font-weight: 600; font-size: 1.05rem; line-height: 1.2; text-decoration: none; cursor: pointer; text-align: center; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; }
+  .btn small { font-size: .74rem; font-weight: 500; opacity: .7; letter-spacing: .01em; }
+  .btn .row { display: inline-flex; align-items: center; gap: 10px; }
+  .btn svg { flex: none; transition: transform .2s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:hover svg { transform: translateX(3px); }
+  .btn-white { background: #fff; color: var(--navy); box-shadow: 0 14px 40px rgba(0,0,0,.35); }
+  .btn-white:hover { background: #EEF2FF; }
+  .btn-navy { background: var(--navy); color: #fff; box-shadow: 0 12px 30px rgba(12,20,48,.25); }
+  .btn-navy:hover { background: #16224A; }
+  .btn-lg { padding: 18px 40px; font-size: 1.15rem; }
+  .btn { max-width: 100%; }
+  .btn .row { flex-wrap: wrap; justify-content: center; }
+  @media (max-width: 480px) { .btn-lg { padding: 16px 14px; font-size: 1rem; width: 100%; } .btn-lg .row { gap: 8px; } }
+  .btn-sm { padding: 11px 20px; font-size: .92rem; box-shadow: none; }
+  .btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+  .cta { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .micro { font-size: .88rem; color: var(--muted); }
+  .dark .micro { color: var(--muted-dark); }
+
+  /* ---------- Header ---------- */
+  .site { position: sticky; top: 0; z-index: 50; background: rgba(7,12,32,.82); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+  .site.is-scrolled { border-color: var(--line-dark); }
+  .nav { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; }
+  .brand img { width: 32px; height: auto; }
+  .anchors { display: flex; gap: 28px; font-size: .95rem; font-weight: 500; color: rgba(255,255,255,.75); }
+  .anchors a { text-decoration: none; }
+  .anchors a:hover { color: #fff; }
+  @media (max-width: 860px) { .anchors { display: none; } }
+  @media (max-width: 640px) { .nav .btn { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .hero { background: var(--navy-deep); color: #fff; padding: clamp(56px, 8vw, 96px) 0 0; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: -20% 0 auto; height: 70%; pointer-events: none; background: radial-gradient(50% 60% at 50% 0%, rgba(74,124,255,.32) 0%, rgba(74,124,255,0) 70%); }
+  .hero .wrap { position: relative; }
+  .hero-text { max-width: 900px; margin-inline: auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .pill { display: inline-block; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line-dark); background: rgba(255,255,255,.05); font-size: .9rem; line-height: 1.4; color: rgba(255,255,255,.8); text-align: center; max-width: 100%; }
+  .pill strong { color: #fff; font-weight: 600; }
+  .hero h1 em { font-style: normal; color: var(--sky); }
+  .hero .sub { max-width: 600px; }
+
+  .video { position: relative; width: 100%; max-width: 960px; margin: clamp(36px, 5vw, 56px) auto 0; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; background: #0A1230; border: 1px solid rgba(255,255,255,.12); box-shadow: 0 40px 100px rgba(0,0,0,.5); }
+  .poster { position: absolute; inset: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; background: radial-gradient(60% 70% at 50% 30%, rgba(74,124,255,.35) 0%, rgba(74,124,255,0) 70%), linear-gradient(180deg, #121D45 0%, #0A1230 100%); }
+  .poster .face { width: clamp(84px, 12vw, 120px); height: clamp(84px, 12vw, 120px); border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 5px rgba(255,255,255,.12), 0 20px 50px rgba(0,0,0,.45); }
+  .play { width: clamp(64px, 9vw, 84px); height: clamp(64px, 9vw, 84px); border-radius: 50%; background: #fff; color: var(--navy); display: grid; place-items: center; box-shadow: 0 16px 40px rgba(0,0,0,.4); transition: transform .2s ease; }
+  .poster:hover .play { transform: scale(1.06); }
+  .caption { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 24px; background: linear-gradient(180deg, rgba(10,18,48,0) 0%, rgba(10,18,48,.9) 60%); font-weight: 600; font-size: 1rem; }
+  .caption span:last-child { font-weight: 500; color: rgba(255,255,255,.6); font-size: .9rem; white-space: nowrap; }
+  .media, .media iframe, .media video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+  .video-note { margin-top: 12px; text-align: center; font-size: .9rem; color: var(--muted-dark); }
+  .hero .cta { margin-top: 32px; }
+  .trust { display: inline-flex; align-items: center; gap: 12px; font-size: .95rem; color: rgba(255,255,255,.75); }
+  .trust img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px rgba(255,255,255,.2); }
+  .trust strong { color: #fff; font-weight: 600; }
+  @media (max-width: 640px) {
+    .video { border-radius: 18px; }
+    .video:not(.is-playing) { aspect-ratio: 4 / 3; }
+    .poster { gap: 14px; padding-bottom: 44px; }
+    .caption { padding: 12px 16px; font-size: .88rem; }
+  }
+
+  /* ---------- Chiffres ---------- */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: clamp(48px, 6vw, 80px) 0; margin-top: clamp(48px, 6vw, 72px); border-top: 1px solid var(--line-dark); }
+  .stat .n { font-size: clamp(2.8rem, 6vw, 4.6rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: #fff; }
+  .stat .l { margin-top: 10px; color: var(--muted-dark); font-size: 1rem; }
+  @media (max-width: 640px) { .stats { grid-template-columns: 1fr; gap: 28px; text-align: center; } }
+
+  /* ---------- Résultats ---------- */
+  .gains { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .gain { background: var(--off); border: 1px solid var(--line); border-radius: 24px; padding: clamp(26px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px; }
+  .gain .from { color: var(--muted); font-size: 1rem; }
+  .gain .n { font-size: clamp(3rem, 5.4vw, 4.4rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1; color: var(--navy); }
+  .gain .l { font-size: 1.05rem; font-weight: 600; color: var(--navy); }
+  .note { margin-top: 20px; font-size: .85rem; color: var(--muted); text-align: center; }
+  @media (max-width: 700px) { .gains { grid-template-columns: 1fr; } }
+
+  /* ---------- Pour qui ---------- */
+  .fit { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .fit .sub { margin-top: 18px; }
+  .fit .sub strong { color: var(--navy); font-weight: 600; }
+  .fit-row { padding: 22px 0; border-top: 1px solid var(--line); }
+  .fit-row:last-child { border-bottom: 1px solid var(--line); }
+  .fit-row .k { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .fit-row h3 { margin-top: 6px; font-size: 1.3rem; }
+  .fit-row p:last-child { margin-top: 6px; color: var(--muted); font-size: 1rem; }
+  @media (max-width: 860px) { .fit { grid-template-columns: 1fr; } }
+
+  /* ---------- Où se trouve votre argent ---------- */
+  .sectors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line-dark); }
+  .sector { padding: 32px 28px 32px 0; border-bottom: 1px solid var(--line-dark); }
+  .sector:not(:last-child) { border-right: 1px solid var(--line-dark); }
+  .sector + .sector { padding-left: 28px; }
+  .sector h3 { font-size: 1.6rem; color: #fff; }
+  .sector p { margin-top: 12px; color: var(--muted-dark); font-size: 1rem; line-height: 1.5; }
+  .sector .who { margin-top: 6px; font-size: .9rem; color: rgba(255,255,255,.5); }
+  .sector .who + p { margin-top: 10px; }
+  @media (max-width: 860px) { .sectors { grid-template-columns: 1fr; } .sector, .sector + .sector { padding: 26px 0; border-right: 0 !important; } }
+
+  /* ---------- Méthode ---------- */
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; counter-reset: s; }
+  .step { border-top: 2px solid var(--navy); padding-top: 18px; }
+  .step .k { font-size: .8rem; font-weight: 600; letter-spacing: .1em; color: var(--muted); }
+  .step h3 { margin-top: 8px; font-size: 1.3rem; }
+  .step p { margin-top: 8px; color: var(--muted); font-size: .98rem; line-height: 1.45; }
+  @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+
+  /* ---------- Antoine ---------- */
+  .about { display: grid; grid-template-columns: 420px 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+  .about img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 28px; }
+  .about .sub { margin-top: 18px; }
+  .about .sub strong, .about .txt strong { color: var(--navy); font-weight: 600; }
+  .about .txt { margin-top: 14px; color: var(--muted); font-size: 1rem; line-height: 1.55; text-wrap: pretty; }
+  .about .big { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 36px; margin-top: 32px; }
+  .about .big .n { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: var(--navy); }
+  .about .big .l { margin-top: 6px; color: var(--muted); font-size: .92rem; }
+  .path { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  .path strong { color: var(--navy); font-weight: 600; }
+  @media (max-width: 900px) { .about { grid-template-columns: 1fr; } .about img { max-width: 240px; border-radius: 22px; margin-inline: auto; } .about .big { grid-template-columns: repeat(3, auto); gap: 24px; } }
+  @media (max-width: 480px) { .about .big { grid-template-columns: 1fr 1fr; } }
+
+  /* ---------- FAQ ---------- */
+  .faq { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
+  @media (max-width: 860px) { .faq { grid-template-columns: 1fr; } }
+  .faq details { border-top: 1px solid var(--line); }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 600; font-size: 1.08rem; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .plus { flex: none; width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--line); display: grid; place-items: center; color: var(--navy); transition: transform .2s ease; }
+  .faq details[open] summary .plus { transform: rotate(45deg); }
+  .faq .a { padding: 0 0 22px; color: var(--muted); max-width: 60ch; }
+
+  /* ---------- Closing + formulaire ---------- */
+  .close { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+  @media (max-width: 900px) { .close { grid-template-columns: 1fr; } }
+  .close h2 { max-width: 16ch; }
+  .close .sub { margin-top: 20px; max-width: 46ch; }
+  .look { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .look span { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-dark); font-size: .9rem; color: rgba(255,255,255,.85); }
+  .close .trust { margin-top: 28px; }
+  .card { background: #fff; color: var(--text); border-radius: 24px; padding: clamp(26px, 3.5vw, 40px); box-shadow: 0 40px 100px rgba(0,0,0,.45); }
+  .card h3 { font-size: 1.4rem; }
+  .card .hint { margin-top: 6px; margin-bottom: 22px; color: var(--muted); font-size: .95rem; }
+  .form { display: grid; gap: 12px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 520px) { .two { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: .86rem; font-weight: 600; color: var(--navy); }
+  .field input, .field select { width: 100%; font: inherit; font-size: 1rem; color: var(--text); padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: #fff; transition: border-color .15s ease, box-shadow .15s ease; }
+  .field select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%235F6A86' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 4px rgba(12,20,48,.12); }
+  .form .btn { width: 100%; margin-top: 6px; }
+  .consent { margin-top: 12px; font-size: .78rem; color: var(--muted); line-height: 1.45; }
+  .consent a { color: var(--muted); }
+  .err { display: none; margin-top: 10px; font-size: .9rem; color: #B42318; }
+  .hp { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+  .sent { display: none; text-align: center; padding: 20px 0; }
+  .sent .n { font-size: 3rem; line-height: 1; }
+  .sent h3 { margin-top: 14px; }
+  .sent p { margin-top: 8px; color: var(--muted); }
+  .card.is-sent form { display: none; }
+  .card.is-sent .sent { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,.6); padding: 36px 0; font-size: .9rem; border-top: 1px solid var(--line-dark); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px 24px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: #fff; }
+  footer .brand img { width: 26px; }
+
+  /* ---------- CTA mobile collante ---------- */
+  .sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(7,12,32,.9); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-top: 1px solid var(--line-dark); transform: translateY(110%); transition: transform .25s ease; }
+  .sticky.is-visible { transform: none; }
+  .sticky .btn { width: 100%; }
+  @media (min-width: 800px) { .sticky { display: none; } }
+
+  /* ---------- Verrou vidéo (optionnel, CONFIG) ---------- */
+  .watch { max-width: 960px; margin: 14px auto 0; display: none; }
+  body.gated .watch { display: block; }
+  .watch .bar { height: 3px; background: var(--line-dark); border-radius: 99px; overflow: hidden; }
+  .watch .bar span { display: block; height: 100%; width: 0; background: #fff; transition: width .3s ease; }
+  .watch p { margin-top: 10px; font-size: .9rem; color: var(--muted-dark); text-align: center; }
+  body.gated .gate-hidden { display: none !important; }
+
+  /* ---------- Apparition ---------- */
+  html.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  html.js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { html.js .reveal { opacity: 1; transform: none; transition: none; } }
+
+  /* ---------- Modales légales ---------- */
+  dialog.legal { border: 0; padding: 0; border-radius: 20px; width: min(760px, calc(100vw - 32px)); max-height: min(85vh, 900px); box-shadow: 0 40px 100px rgba(0,0,0,.45); color: var(--text); }
+  dialog.legal::backdrop { background: rgba(7,12,32,.7); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+  .legal-inner { padding: clamp(24px, 4vw, 44px); position: relative; font-size: .95rem; line-height: 1.6; }
+  .legal-inner h2 { font-size: 1.6rem; margin-bottom: 4px; }
+  .legal-inner h3 { font-size: 1.05rem; margin: 26px 0 8px; }
+  .legal-inner p { margin: 0 0 10px; color: var(--muted); }
+  .legal-inner ul { list-style: disc; padding-left: 20px; color: var(--muted); margin-bottom: 10px; }
+  .legal-date { font-size: .85rem; color: var(--muted); }
+  .legal-close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 22px; line-height: 1; cursor: pointer; color: var(--navy); }
+</style>
+</head>
+<body>
+
+<header class="site" id="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Cargou Consulting — haut de page"><img src="assets/logo-cc-white.png" alt="" width="32" height="27"><span>Cargou Consulting</span></a>
+    <nav class="anchors" aria-label="Sections"><a href="#resultats">Résultats</a><a href="#methode">Méthode</a><a href="#antoine">Antoine</a></nav>
+    <a class="btn btn-white btn-sm gate-hidden" href="#diagnostic">Faire mon diagnostic gratuit</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO + VSL + CTA -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="pill">Restaurateurs · Artisans · Prestataires de services <strong>· 100 à 500 k€ de CA</strong></p>
+        <h1>Gagnez plus.<br><em>Sans travailler plus.</em></h1>
+        <p class="sub">J'identifie les leviers qui vous font gagner de l'argent et du temps, avec l'activité que vous avez déjà.</p>
+      </div>
+
+      <div class="video" id="video">
+        <div class="poster" id="poster" role="button" tabindex="0" aria-label="Lire la vidéo (5 minutes)">
+          <img class="face" src="assets/antoine-face.jpg" alt="" width="120" height="120">
+          <span class="play" aria-hidden="true"><svg width="28" height="32" viewBox="0 0 22 26" fill="currentColor"><path d="M0 0 22 13 0 26V0Z"/></svg></span>
+          <div class="caption"><span>Comment identifier les gains cachés dans votre entreprise</span><span>5 min</span></div>
+        </div>
+        <div class="media" id="media" hidden></div>
+      </div>
+      <p class="video-note" id="video-note" hidden></p>
+      <div class="watch" aria-live="polite"><div class="bar"><span id="watch-bar"></span></div><p id="watch-msg"></p></div>
+
+      <div class="cta gate-hidden">
+        <a class="btn btn-white btn-lg" href="#diagnostic"><span class="row">Faire mon diagnostic gratuit <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><small>Gratuit · Sans engagement · 10 min</small></a>
+        <p class="trust"><img src="assets/antoine-face.jpg" alt="" width="36" height="36"><span><strong>Antoine Cargou</strong> · +100 chefs d'entreprise accompagnés</span></p>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><div class="n" data-count="100" data-prefix="+">+100</div><div class="l">chefs d'entreprise accompagnés</div></div>
+        <div class="stat reveal"><div class="n" data-count="5" data-suffix=" ans">5 ans</div><div class="l">d'expérience auprès des dirigeants</div></div>
+        <div class="stat reveal"><div class="n" data-count="90" data-suffix=" jours">90 jours</div><div class="l">de plan d'action, mesuré</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gate-hidden">
+
+  <!-- 2. RÉSULTATS -->
+  <section class="section" id="resultats">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Ce que ça change</p>
+        <h2>Un petit ajustement. Un gain qui se mesure.</h2>
+      </div>
+      <div class="gains">
+        <div class="gain reveal"><p class="from">3 h économisées par semaine</p><p class="n" data-count="150" data-suffix=" h">150 h</p><p class="l">récupérées par an</p></div>
+        <div class="gain reveal"><p class="from">150 € de dépenses supprimées par mois</p><p class="n" data-count="1800" data-suffix=" €">1 800 €</p><p class="l">économisés par an</p></div>
+        <div class="gain reveal"><p class="from">+300 € de marge par chantier × 30 chantiers par an</p><p class="n" data-count="9000" data-suffix=" €">9 000 €</p><p class="l">de marge supplémentaire par an</p></div>
+        <div class="gain reveal"><p class="from">+5 points de marge sur un restaurant à 200 000 € de CA</p><p class="n" data-count="10000" data-suffix=" €">10 000 €</p><p class="l">de marge nette par an</p></div>
+      </div>
+      <p class="note">Exemples illustratifs. Les gains réellement identifiés dépendent de chaque entreprise.</p>
+      <div class="cta reveal" style="margin-top:44px;">
+        <a class="btn btn-navy btn-lg" href="#diagnostic"><span class="row">Faire mon diagnostic gratuit <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><small>Gratuit · Sans engagement · 10 min</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2b. POUR QUI -->
+  <section class="section" id="pour-qui" style="background:var(--off); border-top:1px solid var(--line);">
+    <div class="wrap fit">
+      <div class="reveal">
+        <p class="eyebrow">Pour qui</p>
+        <h2>Cet accompagnement est-il fait pour vous&nbsp;?</h2>
+        <p class="sub">Si votre entreprise réalise entre <strong>100 000 € et 500 000 € de chiffre d'affaires</strong> et que vous voulez sortir du <strong>pilotage au feeling</strong>, cet accompagnement est conçu pour vous.</p>
+      </div>
+      <div class="reveal">
+        <div class="fit-row"><p class="k">Entreprise installée</p><h3>CA entre 100 k€ et 500 k€</h3><p>Peu importe votre secteur ou votre ancienneté, du moment que l'activité tourne déjà.</p></div>
+        <div class="fit-row"><p class="k">Besoin de clarté</p><h3>Vous voulez savoir où va votre argent</h3><p>Trésorerie, prix, rentabilité&nbsp;: vous sentez qu'il y a des zones d'ombre à éclaircir.</p></div>
+        <div class="fit-row"><p class="k">Envie d'avancer</p><h3>Prêt à mettre en place, pas juste à discuter</h3><p>Vous cherchez des actions concrètes à activer, pas un diagnostic qui reste sans suite.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. OÙ SE TROUVE VOTRE ARGENT -->
+  <section class="section dark" id="leviers">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Où se trouve votre argent</p>
+        <h2>Avant de chercher plus de clients, regardons ce que vous gagnez avec <em>ceux que vous avez</em>.</h2>
+        <p class="sub">Vous n'avez peut-être pas besoin de travailler plus. Seulement de mieux exploiter ce que vous faites déjà.</p>
+      </div>
+      <div class="sectors">
+        <div class="sector reveal"><h3>Restauration</h3><p class="who">(restaurants, food trucks, boulangeries, cafés, bars, brasseries, snacks, pizzerias, traiteurs)</p><p>Coût de revient par plat, prix, marges, panier moyen, pertes.</p></div>
+        <div class="sector reveal"><h3>Artisans</h3><p>Coût de revient horaire, devis, temps passé, marge par chantier.</p></div>
+        <div class="sector reveal"><h3>Prestataires de services</h3><p>Rentabilité par client, contrats récurrents, facturation, automatisation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. MÉTHODE -->
+  <section class="section" id="methode">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">La méthode</p>
+        <h2>5 étapes. 90 jours. Des gains mesurés.</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><p class="k">01</p><h3>Comprendre</h3><p>Votre entreprise, votre fonctionnement, vos problématiques.</p></div>
+        <div class="step reveal"><p class="k">02</p><h3>Identifier</h3><p>Où vous perdez du temps et de l'argent.</p></div>
+        <div class="step reveal"><p class="k">03</p><h3>Prioriser</h3><p>Les actions à plus fort impact sur 90 jours.</p></div>
+        <div class="step reveal"><p class="k">04</p><h3>Mettre en place</h3><p>Prix, organisation, automatisations, tableaux de bord.</p></div>
+        <div class="step reveal"><p class="k">05</p><h3>Mesurer</h3><p>Temps gagné, économies, rentabilité.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ANTOINE -->
+  <section class="section" id="antoine" style="background:var(--off); border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="about">
+        <img class="reveal" src="assets/antoine.jpg" alt="Antoine Cargou" width="1000" height="1000" loading="lazy">
+        <div class="reveal">
+          <p class="eyebrow">Qui vous accompagne</p>
+          <h2>Antoine Cargou</h2>
+          <p class="sub">Consultant en accompagnement financier et stratégique, j'ai accompagné <strong>plus de 100 entrepreneurs</strong> en 5 ans.</p>
+          <p class="txt">J'ai travaillé à la <strong>Chambre des Métiers et de l'Artisanat de Bordeaux</strong>, chez <strong>CerFrance Gironde</strong>, l'un des plus gros cabinets d'expertise comptable de Bordeaux, et chez <strong>Cecogeb</strong>, centre de gestion agréé. J'ai aussi monté des dossiers de subvention présentés devant des élus et animé des clubs d'entreprise.</p>
+          <p class="txt">Mais tout a commencé sur le terrain&nbsp;: dès 16 ans, mes étés dans l'entreprise de climatisation de mon père, <strong>plus d'un million d'euros de chiffre d'affaires et 10 salariés</strong>, partie de rien avec un BEP. C'est là que j'ai absorbé mes premières méthodes de gestion, bien avant de les formaliser et de les appliquer auprès de mes clients.</p>
+          <div class="big">
+            <div><div class="n">+100</div><div class="l">chefs d'entreprise accompagnés</div></div>
+            <div><div class="n">5 ans</div><div class="l">d'expérience</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap faq">
+      <div class="reveal">
+        <p class="eyebrow">Avant de commencer</p>
+        <h2>Les questions qu'on me pose.</h2>
+      </div>
+      <div class="reveal">
+        <details><summary>Le diagnostic est-il vraiment gratuit&nbsp;?<span class="plus"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary><p class="a">Oui. L'auto-diagnostic et notre échange sont gratuits et sans engagement. Si des leviers intéressants ressortent, je vous propose d'aller plus loin. Vous décidez.</p></details>
+        <details><summary>Mon entreprise est-elle concernée&nbsp;?<span class="plus"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary><p class="a">Si elle réalise entre 100 000 € et 500 000 € de chiffre d'affaires et que l'activité tourne déjà, oui. Restauration, artisanat, services : le secteur importe peu.</p></details>
+        <details><summary>Vais-je devoir changer mes outils&nbsp;?<span class="plus"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary><p class="a">Non. On commence par votre entreprise, pas par un outil. Seules les actions à impact mesurable sont retenues.</p></details>
+        <details><summary>Que se passe-t-il après l'échange&nbsp;?<span class="plus"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary><p class="a">Si un potentiel est identifié, je vous restitue ce que j'ai constaté, ce que je recommande et ce que cela pourrait vous faire gagner. Puis, si c'est intéressant, un plan d'action sur 90 jours.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CLOSING + FORMULAIRE -->
+  <section class="section dark" id="diagnostic" style="background:var(--navy-deep);">
+    <div class="wrap close">
+      <div class="reveal">
+        <p class="eyebrow">Diagnostic gratuit · 10 min</p>
+        <h2>Votre entreprise vous demande beaucoup. La question, c'est <em>ce qu'elle vous rend</em>.</h2>
+        <p class="sub">10 minutes d'auto-diagnostic, puis un échange pour identifier où il existe quelque chose à gagner.</p>
+        <div class="look"><span>Prix</span><span>Marges</span><span>Temps</span><span>Trésorerie</span><span>Organisation</span><span>Administratif</span></div>
+        <p class="trust"><img src="assets/antoine-face.jpg" alt="" width="36" height="36"><span><strong>Antoine Cargou</strong> · <a href="tel:+33684497511" style="color:#fff">06 84 49 75 11</a> · <a href="mailto:antoine@cargouconsulting.com" style="color:#fff">antoine@cargouconsulting.com</a></span></p>
+      </div>
+      <div class="card reveal" id="card">
+        <form id="lead-form" novalidate>
+          <h3>Faire mon diagnostic gratuit</h3>
+          <p class="hint">Je vous recontacte pour convenir d'un échange.</p>
+          <div class="form">
+            <div class="two">
+              <div class="field"><label for="f-prenom">Prénom</label><input id="f-prenom" name="prenom" type="text" autocomplete="given-name" required placeholder="Votre prénom"></div>
+              <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="06 00 00 00 00"></div>
+            </div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="vous@entreprise.fr"></div>
+            <div class="field"><label for="f-situation">Votre activité</label>
+              <select id="f-situation" name="situation" required><option value="" disabled selected>Choisissez…</option><option>Restauration</option><option>Artisanat</option><option>Prestations de services</option><option>Autre</option></select>
+            </div>
+            <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn-navy btn-lg" type="submit" id="submit-btn"><span class="row">Faire mon diagnostic gratuit <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><small>Gratuit · Sans engagement</small></button>
+          </div>
+          <p class="err" id="form-error">Une erreur est survenue. Réessayez, appelez-moi au 06 84 49 75 11 ou écrivez-moi à antoine@cargouconsulting.com.</p>
+          <p class="consent">Vos informations servent uniquement à vous recontacter. <a href="#confidentialite" data-open="confidentialite">Politique de confidentialité</a>.</p>
+        </form>
+        <div class="sent" aria-live="polite"><p class="n">✓</p><h3>C'est envoyé.</h3><p>Je reviens vers vous rapidement pour convenir d'un échange.</p></div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /gate-hidden -->
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo-cc-white.png" alt="" width="26" height="22"><span>Cargou Consulting</span></a>
+    <span class="links"><a href="#mentions-legales" data-open="mentions-legales">Mentions légales</a><a href="#confidentialite" data-open="confidentialite">Politique de confidentialité</a><a href="tel:+33684497511">06 84 49 75 11</a><a href="mailto:antoine@cargouconsulting.com">antoine@cargouconsulting.com</a></span>
+    <span>© 2026 Cargou Consulting — Antoine Cargou</span>
+  </div>
+</footer>
+
+<div class="sticky gate-hidden" id="sticky"><a class="btn btn-white" href="#diagnostic">Faire mon diagnostic gratuit</a></div>
+
+<dialog class="legal" id="mentions-legales" aria-labelledby="t-ml">
+  <div class="legal-inner">
+    <button class="legal-close" type="button" aria-label="Fermer" data-close>×</button>
+    <h2 id="t-ml">Mentions légales</h2>
+    <p class="legal-date">Dernière mise à jour : 29 mai 2026</p>
+
+    <h3>Éditeur du site</h3>
+    <p>Le présent site est édité par <strong>Cargou Consulting</strong>, entreprise individuelle.<br>
+    Forme juridique : <strong>Entrepreneur individuel (EI)</strong><br>
+    SIREN : <strong>931 996 623</strong><br>
+    SIRET (siège social) : <strong>931 996 623 00027</strong><br>
+    Numéro de TVA intracommunautaire : <strong>FR92931996623</strong><br>
+    Code APE / NAF : <strong>8299Z</strong> — Autres activités de soutien aux entreprises n.c.a.<br>
+    Date de création : <strong>05 février 2025</strong><br>
+    Siège social : <strong>26 Avenue du Mirail, Résidence Estournelle, 33370 Artigues-près-Bordeaux</strong><br>
+    Adresse e-mail : <a href="mailto:contact@cargouconsulting.com">contact@cargouconsulting.com</a></p>
+
+    <h3>Directeur de la publication</h3>
+    <p>Le directeur de la publication est le représentant légal de Cargou Consulting.</p>
+
+    <h3>Hébergeur</h3>
+    <p>Le site est hébergé par <strong>Netlify, Inc.</strong><br>
+    512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis<br>
+    <a href="https://www.netlify.com" target="_blank" rel="noopener">www.netlify.com</a></p>
+
+    <h3>Nom de domaine</h3>
+    <p>Le nom de domaine est enregistré auprès de <strong>Hostinger International Ltd.</strong><br>
+    61 Lordou Vironos Street, 6023 Larnaca, Chypre — <a href="https://www.hostinger.fr" target="_blank" rel="noopener">www.hostinger.fr</a></p>
+
+    <h3>Propriété intellectuelle</h3>
+    <p>L'ensemble des contenus présents sur ce site (textes, visuels, vidéos, logo, mise en page) est protégé par le droit d'auteur. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation préalable écrite de Cargou Consulting est interdite et constituerait une contrefaçon.</p>
+
+    <h3>Données personnelles</h3>
+    <p>Les informations recueillies via le formulaire de contact font l'objet d'un traitement décrit dans notre <a href="#confidentialite" data-open="confidentialite">politique de confidentialité</a>. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à <a href="mailto:contact@cargouconsulting.com">contact@cargouconsulting.com</a>.</p>
+
+    <h3>Responsabilité</h3>
+    <p>Cargou Consulting s'efforce d'assurer l'exactitude des informations diffusées sur ce site, mais ne saurait être tenue responsable des erreurs, omissions, ou de l'indisponibilité temporaire du site. Les contenus ont une vocation informative et ne constituent pas un conseil juridique, comptable ou financier personnalisé.</p>
+  </div>
+</dialog>
+<dialog class="legal" id="confidentialite" aria-labelledby="t-pc">
+  <div class="legal-inner">
+    <button class="legal-close" type="button" aria-label="Fermer" data-close>×</button>
+    <h2 id="t-pc">Politique de confidentialité</h2>
+    <p class="legal-date">Dernière mise à jour : 29 mai 2026</p>
+    <p>Cargou Consulting accorde une grande importance à la protection de vos données personnelles. Cette politique explique quelles données sont collectées via ce site, pourquoi, et quels sont vos droits, conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+
+    <h3>Responsable du traitement</h3>
+    <p>Le responsable du traitement est <strong>Cargou Consulting</strong> (entrepreneur individuel, SIREN 931 996 623).<br>
+    Contact : <a href="mailto:contact@cargouconsulting.com">contact@cargouconsulting.com</a></p>
+
+    <h3>Données collectées</h3>
+    <p>Via le formulaire de prise de consultation, nous collectons uniquement :</p>
+    <ul>
+      <li>votre <strong>prénom</strong> ;</li>
+      <li>votre <strong>numéro de téléphone</strong> ;</li>
+      <li>votre <strong>adresse e-mail</strong> ;</li>
+      <li>votre <strong>situation</strong> (choix dans une liste) ;</li>
+      <li>la <strong>description de votre projet</strong> (champ facultatif).</li>
+    </ul>
+    <p>Aucune donnée sensible n'est demandée. Le site n'utilise pas de cookies de suivi publicitaire.</p>
+
+    <h3>Finalité et base légale</h3>
+    <p>Ces données sont utilisées dans le seul but de <strong>vous recontacter</strong> au sujet de votre demande de consultation et d'assurer le suivi de votre projet. La base légale du traitement est votre <strong>consentement</strong> et l'exécution de mesures précontractuelles prises à votre demande.</p>
+
+    <h3>Destinataires et sous-traitants</h3>
+    <p>Vos données sont destinées exclusivement à Cargou Consulting et ne sont ni vendues, ni cédées à des tiers à des fins commerciales. La transmission technique du formulaire est assurée par <strong>Web3Forms</strong>, qui agit en qualité de sous-traitant pour acheminer le contenu du formulaire vers notre adresse e-mail.</p>
+
+    <h3>Durée de conservation</h3>
+    <p>Vos données sont conservées pendant la durée nécessaire au traitement de votre demande, puis archivées ou supprimées au plus tard <strong>3 ans</strong> après notre dernier contact.</p>
+
+    <h3>Vos droits</h3>
+    <p>Conformément au RGPD, vous disposez des droits suivants sur vos données :</p>
+    <ul>
+      <li>droit d'accès et de rectification ;</li>
+      <li>droit à l'effacement (« droit à l'oubli ») ;</li>
+      <li>droit à la limitation et à l'opposition au traitement ;</li>
+      <li>droit à la portabilité de vos données.</li>
+    </ul>
+    <p>Pour exercer ces droits, écrivez à <a href="mailto:contact@cargouconsulting.com">contact@cargouconsulting.com</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+
+    <h3>Cookies et services tiers</h3>
+    <p>Les vidéos sont intégrées via YouTube en mode « confidentialité renforcée » (youtube-nocookie.com) : aucun cookie de suivi n'est déposé tant que vous ne lancez pas la lecture. La police de caractères est chargée via Google Fonts.</p>
+  </div>
+</dialog>
+
+<script>
+/* =========================================================
+   CONFIG — à renseigner avant la mise en ligne
+   ========================================================= */
+var CONFIG = {
+  VIDEO_MP4: '',            // URL directe du MP4 (Bunny, Cloudflare Stream, Netlify…). Prioritaire sur YouTube.
+  YOUTUBE_ID: '',           // ou identifiant YouTube de la VSL (ex. 'KbKwFkLmKy8'), lecture via youtube-nocookie.com
+  WEB3FORMS_KEY: '5e0daec2-e437-4934-b6f8-d66c157f4500', // clé Web3Forms (https://web3forms.com) — vide = mode démo (envoi simulé)
+  CALENDLY_URL: '',         // ex. 'https://calendly.com/antoine-cargou/diagnostic' — si renseigné, remplace le formulaire
+  VIDEO_GATE_SECONDS: 0     // 0 = page complète. Ex. 180 = la suite s'affiche après 3 min de vidéo regardées.
+};
+</script>
+<script>
+(function () {
+  var header = document.getElementById('site-header'), sticky = document.getElementById('sticky'), target = document.getElementById('diagnostic');
+  function onScroll() {
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+    sticky.classList.toggle('is-visible', window.scrollY > 640 && target.getBoundingClientRect().top > window.innerHeight * 0.6);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* Apparition + compteurs */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fmt(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+  function count(el) {
+    var to = +el.getAttribute('data-count'), pre = el.getAttribute('data-prefix') || '', suf = el.getAttribute('data-suffix') || '', t0 = null;
+    if (reduce) return;
+    function tick(t) { if (!t0) t0 = t; var p = Math.min(1, (t - t0) / 1100); p = 1 - Math.pow(1 - p, 3); el.textContent = pre + fmt(to * p) + suf; if (p < 1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  }
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; e.target.classList.add('in'); e.target.querySelectorAll('[data-count]').forEach(count); if (e.target.hasAttribute('data-count')) count(e.target); io.unobserve(e.target); }); }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    els.forEach(function (el) { io.observe(el); });
+  } else { els.forEach(function (el) { el.classList.add('in'); }); }
+
+  /* Modales légales */
+  document.addEventListener('click', function (e) {
+    var o = e.target.closest('[data-open]');
+    if (o) { e.preventDefault(); var d = document.getElementById(o.getAttribute('data-open')); if (d) { d.showModal(); d.scrollTop = 0; } return; }
+    if (e.target.closest('[data-close]')) { e.target.closest('dialog').close(); return; }
+    if (e.target.tagName === 'DIALOG') e.target.close();
+  });
+  if (location.hash === '#mentions-legales' || location.hash === '#confidentialite') { var d0 = document.getElementById(location.hash.slice(1)); if (d0) d0.showModal(); }
+
+  /* Vidéo + verrou optionnel */
+  var poster = document.getElementById('poster'), media = document.getElementById('media'), note = document.getElementById('video-note'), frame = document.getElementById('video');
+  var gate = CONFIG.VIDEO_GATE_SECONDS > 0 ? CONFIG.VIDEO_GATE_SECONDS : 0, watched = 0, playing = false, last = Date.now(), unlocked = !gate;
+  var bar = document.getElementById('watch-bar'), msg = document.getElementById('watch-msg');
+  function mmss(s) { s = Math.max(0, Math.ceil(s)); var m = Math.floor(s / 60), r = s % 60; return m ? m + ' min ' + (r < 10 ? '0' : '') + r + ' s' : r + ' s'; }
+  function renderGate() { if (!gate) return; if (unlocked) { bar.style.width = '100%'; msg.textContent = 'La suite est débloquée : faites défiler la page ↓'; return; } bar.style.width = Math.min(100, watched / gate * 100) + '%'; msg.textContent = 'Regardez ' + (watched ? 'encore ' : '') + mmss(gate - watched) + ' de vidéo pour découvrir la suite.'; }
+  function unlock() { unlocked = true; document.body.classList.remove('gated'); renderGate(); try { sessionStorage.setItem('cargou_video_ok', '1'); } catch (e) {} onScroll(); }
+  if (gate) {
+    var ok = false; try { ok = sessionStorage.getItem('cargou_video_ok') === '1'; } catch (e) {}
+    if (ok) unlocked = true; else document.body.classList.add('gated');
+    renderGate();
+    setInterval(function () { var now = Date.now(), dt = (now - last) / 1000; last = now; if (unlocked || !playing || document.hidden) return; watched += Math.min(dt, 1); if (watched >= gate) unlock(); else renderGate(); }, 250);
+  }
+  function start() {
+    if (!media.hidden) return;
+    if (CONFIG.VIDEO_MP4) {
+      var v = document.createElement('video'); v.src = CONFIG.VIDEO_MP4; v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+      v.addEventListener('play', function () { playing = true; }); v.addEventListener('pause', function () { playing = false; }); v.addEventListener('ended', function () { playing = false; });
+      media.appendChild(v); media.hidden = false; poster.style.display = 'none'; frame.classList.add('is-playing'); v.play().catch(function () {});
+    } else if (CONFIG.YOUTUBE_ID) {
+      media.hidden = false; poster.style.display = 'none'; frame.classList.add('is-playing');
+      if (gate) {
+        window.onYouTubeIframeAPIReady = function () { new YT.Player(media, { videoId: CONFIG.YOUTUBE_ID, host: 'https://www.youtube-nocookie.com', playerVars: { autoplay: 1, rel: 0, modestbranding: 1, playsinline: 1 }, events: { onStateChange: function (e) { playing = (e.data === 1); } } }); };
+        var s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+      } else {
+        var f = document.createElement('iframe'); f.src = 'https://www.youtube-nocookie.com/embed/' + CONFIG.YOUTUBE_ID + '?autoplay=1&rel=0&modestbranding=1&playsinline=1'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.title = 'Vidéo de présentation'; media.appendChild(f);
+      }
+    } else { note.hidden = false; note.textContent = 'Vidéo à intégrer : renseignez VIDEO_MP4 ou YOUTUBE_ID dans la CONFIG en bas du fichier.'; }
+  }
+  poster.addEventListener('click', start);
+  poster.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); start(); } });
+
+  /* Formulaire (Web3Forms) ou Calendly */
+  var card = document.getElementById('card');
+  if (CONFIG.CALENDLY_URL) {
+    card.innerHTML = '<div class="calendly-inline-widget" data-url="' + CONFIG.CALENDLY_URL + '?hide_gdpr_banner=1&primary_color=0c1430" style="min-width:300px;height:680px;"></div>'; card.style.padding = '8px';
+    var c = document.createElement('script'); c.src = 'https://assets.calendly.com/assets/external/widget.js'; c.async = true; document.head.appendChild(c);
+  } else {
+    var form = document.getElementById('lead-form'), btn = document.getElementById('submit-btn'), err = document.getElementById('form-error');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); err.style.display = 'none';
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var d = new FormData(form); if (d.get('botcheck')) return;
+      var payload = { access_key: CONFIG.WEB3FORMS_KEY, subject: 'Nouvelle demande de diagnostic gratuit — ' + d.get('prenom'), from_name: 'Landing Cargou Consulting', prenom: d.get('prenom'), telephone: d.get('telephone'), email: d.get('email'), situation: d.get('situation') };
+      btn.disabled = true; var label = btn.innerHTML; btn.textContent = 'Envoi en cours…';
+      function done(ok) { btn.disabled = false; btn.innerHTML = label; if (ok) { card.classList.add('is-sent'); card.scrollIntoView({ behavior: 'smooth', block: 'center' }); } else err.style.display = 'block'; }
+      if (!CONFIG.WEB3FORMS_KEY) { console.warn('[Cargou] WEB3FORMS_KEY vide : envoi simulé.'); setTimeout(function () { done(true); }, 700); return; }
+      fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) }).then(function (r) { return r.json(); }).then(function (j) { done(!!j.success); }).catch(function () { done(false); });
+    });
+  }
+})();
+</script>
+</body>
+</html>

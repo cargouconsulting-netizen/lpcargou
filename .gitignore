@@ -1,0 +1,6 @@
+# Vidéos sources et encodées (trop lourdes, à héberger ailleurs)
+video/
+# Dossiers locaux
+.vercel/
+.claude/
+.DS_Store
